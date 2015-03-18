@@ -13,6 +13,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false
 
+# Rom Version
+ TESLA_VERSION := $(PLATFORM_VERSION)-$(TESLA_RELEASE_TYPE)
+
 # Launcher3 supported devices
 ifneq ($(filter tesla_hammerhead tesla_mako tesla_shamu,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
@@ -21,6 +24,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/tesla/overlay/Launcher3
 endif
+
+# Additional packages
+-include vendor/tesla/config/packages.mk
+
+# Versionning
+-include vendor/tesla/config/version.mk
 
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/tesla/overlay/common
