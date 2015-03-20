@@ -4,4 +4,4 @@
 #
 L="log -p i -t aod"
 
-$L "Welcome to Android `getprop ro.build.version.release` / AndroidOpenDevelopment";
+$L "Welcome to Android `getprop ro.build.version.release` / TeslaProject";
