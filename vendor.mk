@@ -105,11 +105,11 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 # Versioning System
 ANDROID_VERSION = 5.1.0
-DU_VERSION = v9.2
+TESLA_VERSION = v1.0
 
-ifndef DU_BUILD_TYPE
-    DU_BUILD_TYPE := UNOFFICIAL
-    PLATFORM_VERSION_CODENAME := UNOFFICIAL
+ifndef TESLA_BUILD_TYPE
+    TESLA_BUILD_TYPE := BETA
+    PLATFORM_VERSION_CODENAME := BETA
 endif
 
 # Set all versions
